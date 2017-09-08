@@ -1,0 +1,93 @@
+body {
+  background-color: #eee;
+}
+
+/* Main link element (<div> tag) */
+.link {
+  background: white;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+/* Link title (<a> tag) */
+.linkTitle {
+  color: #428bca;
+  text-decoration: none;
+  margin-right: 5px;
+}
+.linkTitle:hover {
+  text-decoration: none;
+}
+
+/* Link URL (<span> tag) */
+.linkUrl {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+/* Link headline containing title & URL (<h4> tag) */
+.linkHeadline {
+  margin: 0;
+}
+
+/* Link author (<span> tag) */
+.linkAuthor {
+  font-weight: normal;
+  font-size: 80%;
+}
+
+.linkForm {
+  margin-bottom: 20px;
+}
+
+.successEl {
+  font-size: 2em;
+  font-weight: bold;
+  vertical-align: middle;
+  background-color: #8f8;
+  border-radius : 4px;
+  height : 84px;
+  margin-bottom: 10px;
+  text-align : center;
+  padding: 15px;
+  color : #666;
+  float:none;
+}
+
+.deleteMe{
+  text-decoration: none;
+  font-family: 'Monaco';
+  padding: 3px;
+  font-size: 1.3em;
+  color: black;
+}
+
+.deleteMe:link{
+  text-decoration: none;
+  color: black;
+}
+
+.deleteMe:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.deleteMe:hover{
+  text-decoration: none;
+  color: red;
+}
+
+.fave{
+  text-decoration: none;
+  font-size: 1.3em;
+  color: black;
+}
+
+.fave:link{
+  text-decoration: none;
+}
+
+
+.addlink:hover{
+  background-color: #eee
+}

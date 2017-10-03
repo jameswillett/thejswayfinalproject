@@ -17,27 +17,6 @@ const pool = new Pool({
 })
 
 app.use(express.static('public'));
-/*
-var links = [
-  {
-    author: 'james',
-    title: 'Facebook',
-    url: 'http://www.facebook.com/',
-    favorite: false,
-  },{
-    author: 'james',
-    title: 'Wikipedia',
-    url: 'http://www.wikipedia.com/',
-    favorite: false,
-  },{
-    author: 'james',
-    title: 'Reddit',
-    url: 'http://wwww.reddit.com/',
-    favorite: false,
-  }
-];*/
-
-
 
 app.post("/deletelink", jsonParser, (request, response) => {
   pool.query('delete from links where id=$1',[request.body.index])
@@ -61,7 +40,6 @@ app.post("/addlinks", jsonParser, (request,response) => {
     if (err){
       console.log(err)
     }
-    console.log(links.rows);
     response.json({});
   })
 

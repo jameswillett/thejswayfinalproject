@@ -39,7 +39,6 @@ buttonEl.addEventListener('click', () => {
     linkSubmit.style.height='3em';
     linkSubmit.style.backgroundColor = '#66f';
     linkSubmit.style.color = "#fff";
-    //linkSubmit.textContent = 'Add Link';
 
   submitFormEl.appendChild(linkSubmit);
 
@@ -93,7 +92,6 @@ buttonEl.addEventListener('click', () => {
 });
 
 const printLinks = ({id: index, author, title, url, favorite}) => {
-  console.log(index);
   const linkContainer = document.createElement('div');
     linkContainer.setAttribute('class','link');
     contentEl.prepend(linkContainer);//<==
@@ -104,7 +102,6 @@ const printLinks = ({id: index, author, title, url, favorite}) => {
     deleteMe.setAttribute('class','deleteMe');
     linkContainer.appendChild(deleteMe);
     deleteMe.addEventListener('click', e => {
-      console.log(title);
       const r = confirm(`Are you sure you want to delete "${title}"?`);
       if ( r ) {
         fetch("/deletelink",{
@@ -117,15 +114,9 @@ const printLinks = ({id: index, author, title, url, favorite}) => {
         })
           .then(response => response.json())
           .then(result => {
-            console.log(result)
             deleteMe.parentNode.remove();
           })
         }
-        //links.splice(index, 1);
-        //console.log(index);
-      //deleteMe.parentNode.parentNode.innerHTML = '';
-      //links.map(printLinks)
-
   })
 
   const favEl = document.createElement('a');
@@ -148,7 +139,6 @@ const printLinks = ({id: index, author, title, url, favorite}) => {
       })
         .then(response => response.json())
         .then(result => {
-          console.log(result)
           if(result.favorite){
             favEl.textContent = '❤️';
           } else {
@@ -195,7 +185,6 @@ const getLinks = () => {
     })
     .then(response => response.json())
     .then(result => {
-      console.log(result);
       result.map(printLinks)
     })
 }
